@@ -1,0 +1,1239 @@
+
+
+html {
+    font-size: 15px;
+}
+:root {
+    /*  --primary-color: #68ddbd 
+    */
+      --primary-color: #0045ff;
+      --primary-color-light: #00d4ff;
+      --text-light: #cbd5e1;
+      --white: #ffffff;
+      --black: #000000;
+      --orange-secundary: #ff7c39;
+      --celeste: #62e3fe;
+      --blue: #0b42f4; 
+      --facebook: #3b5998;
+      --twitter: #050505;
+      --youtube: #c4302b;
+      --whatsapp: #05a837;
+      --instagram: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    
+    }
+body {
+
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+
+ .container-flex {
+    height: 100vh; /* Ajusta la altura del banner, por ejemplo, al 80% del viewport height */
+    width: 100%;
+    background: rgb(10,5,82);
+    background: linear-gradient(133deg, rgba(10,5,82,1) 0%, rgba(9,9,121,1) 39%, 
+     rgba(0,69,255,1) 48%, rgba(0,212,255,1) 55%, rgba(0,212,255,1) 79%); 
+    position: relative;
+    overflow: hidden;
+} 
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+
+nav {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+
+
+nav ul {
+    display: flex;
+    list-style-type: none;  
+}
+nav ul li{
+    margin:0 5px;
+    position: relative;  /* Nuevo codigo */
+    margin-right: 20px; /* Espaciado entre los elementos del menú */
+}
+
+nav ul a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.4s ease-in-out;
+    border-radius: 20px;
+    transform: translateX(-50%);
+}
+
+/* Mantener la línea inferior verde activada en el elemento activo */
+nav ul li.active a::before {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+}
+nav ul a:hover::before {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+}
+
+nav ul a:hover {
+    color: #00d4ff /* Cambia el color del texto al pasar el mouse */
+}
+/* Cambiar el color del texto del elemento activo */
+nav ul li.active a {
+    color: #00d4ff ;
+}
+
+
+/* ------------------------------------------   imagen banner  -------------------------------------------------- */
+
+
+/* Contenedor principal */
+ .main-content {
+    width: 60%;
+    padding-top: 50px;
+    display: flex; /* Usa flexbox para organizar los elementos en una fila */
+} 
+
+
+/* Contenedor del texto */
+ .main-text {
+    flex: 1; /* Ocupa el espacio disponible */
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    padding-left: 20%;
+} 
+
+
+/* Estilos del botón */
+.main-content .btn-label {
+    position: relative;
+    left: -12px;
+    display: inline-block;
+    padding: 6px 12px;
+    background:var(--blue);
+    border-radius: 3px 0 0 3px;
+}
+
+.main-content .btn-labeled {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    color: white;
+    z-index: 1001;
+}
+
+.main-content .btn {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 12px 24px; /* Aumenta el relleno interno */
+    font-size: 18px; /* Aumenta el tamaño del texto */
+    border-radius: 5px; /* Redondea los bordes si lo deseas */
+    min-width: 150px; /* Asegura un ancho mínimo del botón */
+    background: #00d4ff;
+}
+
+/* Contenedor de la imagen */
+.image-banner {
+    flex: 2; /* Ocupa el espacio disponible */
+    padding-left: 50%;
+}
+
+/* Ajustes de Swiper */
+.swiper {
+    width: 20rem; /* Ajusta el ancho del swiper */
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen dentro del swiper-slide */
+.image-banner img {
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor del slide */
+    height: auto; /* Mantiene la proporción de la imagen */
+    left: 70%;
+
+}
+
+/* Estilos del texto */
+.main-content h1 {
+    font-size: 60px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.main-content p {
+    margin-top: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+
+
+/* ------------------------- boton redes sociales -------------------------------------------- */
+
+.customer-photo {
+    position: relative; 
+    width: 250px; /* Tamaño del contenedor */
+    height: 250px; /* Tamaño del contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 40px;
+    left: 20%;
+}
+
+.social-button {
+    width: 60px; /* Tamaño del botón */
+    height: 60px; /* Tamaño del botón */
+    border-radius: 50%;
+    background-color: var(--primary-color-light); /* Color de fondo del botón */
+    color: white;
+    font-size: 24px; /* Tamaño del ícono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.social-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg); /* Rotación diagonal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.customer-photo:hover .social-icons {
+    opacity: 1;
+    visibility: visible;
+}
+
+.social-icons span {
+    margin: 5px 0;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Asegura que los íconos sean posicionables */
+}
+
+.social-icons .facebook {
+    background-color: var(--facebook);
+    top: calc(-4 * 3rem - 100px); /* Ajustado 20px adicionales hacia arriba */
+}
+
+.social-icons .whatsapp {
+    background-color: var(--whatsapp);
+    top: calc(-3 * 3rem - 100px); /* Ajustado 20px adicionales hacia arriba */
+}
+
+.social-icons .youtube {
+    background-color: var(--youtube);
+    top: calc(-2 * 3rem - 100px); /* Ajustado 20px adicionales hacia arriba */
+    
+}
+
+.social-icons .twitter {
+    background-color: var(--twitter);
+    top: calc(-1 * 3rem - 100px); /* Ajustado 20px adicionales hacia arriba */
+}
+
+.social-icons .instagram {
+    background: var(--instagram);
+    top: calc(0px - 100px); /* Ajustado 20px adicionales hacia arriba */
+}
+
+
+.social-icons span i {
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+.social-icons span i:hover {
+    font-size: 1.9rem;
+    transform: rotate(-45deg); /* Rotación hacia la izquierda 45 grados */
+    transition: transform 0.3s ease; /* Transición suave para la rotación */
+    
+}
+
+ /* ------------------------------  Termina banner   ---------------------------- */
+/* --------------------------------------------- Estilos generales ----------------------------------- */
+ 
+
+
+.section__container {
+    display: grid;
+    grid-template-columns: 50% 50%; /* Cada columna ocupa el 50% del ancho */
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    /* background-color: var(--celeste); */
+    background: rgb(135,226,245);
+    background: linear-gradient(128deg, rgba(135,226,245,1) 16%,
+     rgba(255,255,255,1) 34%, rgba(255,255,255,1) 62%, rgba(4,194,232,1) 82%); 
+}
+  
+  .template__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 30px;
+    padding-right: 95px;
+  }
+  .section__subheader {
+         text-align: center;
+  }
+  .template__image {
+    display: flex;
+    justify-content: center; /* Centra el contenedor de la imagen horizontalmente */
+    align-items: center; /* Centra el contenedor de la imagen verticalmente */
+  }
+  
+  .image-wrapper {
+    width: 100%; /* Mantiene la imagen a 100% del ancho del contenedor */
+    max-width: 100%; /* Asegura que no exceda el 100% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .template__image img {
+    width: 60%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  .btn-nosotros {
+    padding: 5px 20px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 50px; /* Altura fija */
+    width: 150px; /* Ancho fijo en píxeles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-nosotros:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  
+
+  /* Inicializa los elementos fuera de su posición final */
+  .section__subheader,
+  .section__header,
+  .description,
+  .btn-nosotros,
+  .image-wrapper {
+    opacity: 0;
+    transform: translateY(200px); /* Desplazado aún más lejos para una animación más visible */
+    transition: all 3s ease-in-out; /* Animación lenta */
+  }
+  
+/* Animación del header de izquierda a derecha */
+.section__header {
+  transform: translateX(-50px); /* Desplazado más lejos para una animación más visible */
+  transition: all 2s ease-in-out; /* Animación más lenta */
+}
+
+.animate-header {
+  transform: translateX(0); /* Mueve el elemento a su posición final */
+  opacity: 1;
+}
+
+/* Animación de la descripción con zoom */
+.description {
+  transform: scale(0.3); /* Más pequeño para una animación más notable */
+  transition: all 2s ease-in-out; /* Animación más lenta */
+}
+
+.animate-description {
+  transform: scale(1); /* Ajusta al tamaño original */
+  opacity: 1;
+}
+
+/* Animación del botón */
+.animate-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación de la imagen de abajo hacia arriba */
+.image-wrapper {
+  transform: translateY(50px); /* Desplazado más lejos para una animación más visible */
+  transition: all 2s ease-in-out; /* Animación más lenta */
+}
+
+.animate-image {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+
+  /* ----------------------------------------Termina Nosotros --------------------------------------------------- */
+
+
+  .tu-mejoreleccion {
+    /* background-color: #87e2f5; */
+    background: rgb(255,255,255);
+    background: linear-gradient(133deg, rgba(255,255,255,1) 19%,
+     rgba(135,226,245,1) 43%, rgba(0,212,255,1) 53%, rgba(255,255,255,1) 84%); 
+    padding: 3rem 0;
+    padding-top: 50px;
+}
+
+.tu-mejoreleccion h2 span {
+    color: #f28e1c;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.grid-item i {
+    font-size: 48px;
+    color: #f28e1c;
+    margin-bottom: 15px;
+}
+
+.grid-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+
+
+/* Inicializa los elementos fuera de su posición final y ocultos */
+.grid-item {
+    opacity: 0;
+    transform: translateY(200px); /* Desplazamiento más largo fuera de la vista */
+    transition: transform 5s ease-in-out, opacity 5s ease-in-out; /* Animación más lenta */
+  }
+  /* Animaciones para los elementos */
+  .grid-item.animate-item {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a su posición final */
+  }
+  /* Añadir retraso a la animación para cada elemento */
+  .grid-item:nth-child(1) {
+    transition-delay: 0s; /* Primer elemento sin retraso */
+  }
+  .grid-item:nth-child(2) {
+    transition-delay: 0.5s;
+  }
+  .grid-item:nth-child(3) {
+    transition-delay: 1s;
+  }
+  .grid-item:nth-child(4) {
+    transition-delay: 1.5s;
+  }
+  .grid-item:nth-child(5) {
+    transition-delay: 2s;
+  }
+  .grid-item:nth-child(6) {
+    transition-delay: 2.5s;
+  }
+  .grid-item:nth-child(7) {
+    transition-delay: 3s;
+  }
+  .grid-item:nth-child(8) {
+    transition-delay: 3.5s;
+  }
+  
+  
+ /* -------------------------------------Colaboradores -----------------------------------------------  */
+ .banner_h {
+    background: #f8f9fa; /* Fondo opcional para el banner */
+    padding: 3rem 1.5rem; /* Ajusta el padding si es necesario */
+}
+
+.flex-container-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.grid-item-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(25% - 20px); /* Ajusta el ancho y resta el espacio entre elementos */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones personalizadas */
+}
+
+.grid-item-banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta la imagen para que se ajuste al contenedor */
+    border-radius: 8px; /* Opcional: Bordes redondeados para las imágenes */
+    transition: transform 0.3s ease; /* Animación personalizada para la imagen */
+}
+
+.grid-item-banner:hover img {
+    transform: scale(1.1); /* Zoom en la imagen al pasar el ratón */
+}
+
+.grid-item-banner:hover {
+    transform: translateY(-10px); /* Eleva el elemento al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Agrega sombra al pasar el ratón */
+}
+
+.grid-item-banner h2 {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #333;
+    text-align: center;
+}
+/* ---------------------------------------  Modal ---------------------------------------------- */
+/* Estilos para la ventana modal */
+/* Estilos generales para las ventanas modales */
+/* Estilos para la ventana modal */
+/* Efecto de redimensionar */
+/* Efecto de redimensionar */
+/* Efecto de máscara del modal */
+/* Estilo de máscara del modal */
+.modalmask {
+  position: fixed;
+  font-family: Arial, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 400ms ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mostrar el modal cuando se activa */
+.modalmask:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Estilo de máscara del modal */
+.modalmask {
+  position: fixed;
+  font-family: Arial, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 400ms ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mostrar el modal cuando se activa */
+.modalmask:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Tamaño inicial del modal */
+.modalbox {
+  width: 0;
+  height: 0;
+  position: relative;
+  padding: 0;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 500ms ease-in;
+  overflow: hidden;
+}
+
+/* Expansión del modal cuando está activo */
+.modalmask:target .modalbox {
+  width: 400px;
+  height: 300px;
+  padding: 20px;
+  transition: all 500ms ease-in-out;
+  /* Añadir scroll si el contenido excede el tamaño del modal */
+  overflow: auto; /* Comentado: Agregar esta línea para permitir desplazamiento */
+}
+
+/* Contenido del modal */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 100%; /* Ajustar al 100% del tamaño del modal */
+  margin: auto;
+}
+
+/* Imagen de perfil */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Contenedor de iconos de redes sociales */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 1rem;
+}
+
+/* Estilos para los íconos */
+.social-icons a {
+  color: var(--blue);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+/* Botón de cerrar */
+.close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 24px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.close:hover {
+  background: #FAAC58;
+  color: #222;
+}
+
+/* Expansión del modal cuando está activo */
+.modalmask:target .modalbox {
+  width: 400px;
+  height: 300px;
+  padding: 20px;
+  transition: all 500ms ease-in-out;
+  /* Añadir scroll si el contenido excede el tamaño del modal */
+  overflow: auto; /* Agregar esta línea para permitir desplazamiento */
+}
+
+
+
+/* ...................................... Estilos específicos para cada modal... */
+
+
+/* Modal de Melisa */
+#modal-melisa .modal-content {
+  background-color: #ffebcd; /* Fondo color crema */
+  border: 2px solid #ff7f50; /* Borde coral */
+  color: #333; /* Color del texto */
+  font-family: 'Arial', sans-serif; /* Fuente específica */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+  transform: rotate(2deg); /* Efecto de rotación leve */
+}
+
+/* Modal de Alberto */
+#modal-alberto .modal-content {
+  background-color: #f0f8ff; /* Fondo azul claro */
+  border-radius: 20px; /* Bordes redondeados */
+  color: #2f4f4f; /* Color gris oscuro */
+  font-family: 'Georgia', serif; /* Fuente diferente */
+  padding: 3rem; /* Más espacio interno */
+  text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Modal de Wendy */
+#modal-wendy .modal-content {
+  background-color: #fff0f5; /* Fondo rosado claro */
+  color: #8b008b; /* Texto color morado oscuro */
+  font-family: 'Courier New', monospace; /* Fuente monoespaciada */
+  border: 5px dashed #ba55d3; /* Borde punteado morado */
+  box-shadow: 0 0 20px rgba(186, 85, 211, 0.5); /* Sombra morada */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+/* Modal de Paco */
+#modal-paco .modal-content {
+  background-color: #e6e6fa; /* Fondo lavanda */
+  color: #4682b4; /* Texto azul acero */
+  font-family: 'Times New Roman', Times, serif; /* Fuente clásica */
+  border: 3px solid #4682b4; /* Borde del mismo color que el texto */
+  padding: 2.5rem; /* Más espacio interno */
+  transition: all 0.3s ease-in-out; /* Transición suave al hacer hover */
+}
+
+#modal-paco .modal-content:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al hacer hover */
+}
+
+.social-profile a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 10px;
+  border-radius: 10px; /* Esquinas redondeadas */
+  position: relative;
+  overflow: hidden; /* Para el efecto de animación */
+  background-color: #f0f0f0; /* Color de fondo inicial */
+  text-align: center;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+.social-profile a i {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto de onda (ripple) */
+.social-profile a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.social-profile a:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Hover: colores específicos para cada red social */
+.social-profile a:hover i {
+  transform: scale(1.2);
+}
+
+.social-profile a:nth-child(1) {
+  background-color: #3b5998; /* Facebook */
+}
+
+.social-profile a:nth-child(2) {
+  background-color: #E1306C; /* Instagram */
+}
+
+.social-profile a:nth-child(3) {
+  background-color: #0077B5; /* LinkedIn */
+}
+
+.social-profile a:nth-child(4) {
+  background-color: #25D366; /* WhatsApp */
+}
+
+.social-profile a:nth-child(5) {
+  background-color: #1DA1F2; /* Twitter */
+}
+
+.social-profile a:hover:nth-child(1) {
+  background-color: #344e86; /* Facebook hover */
+}
+
+.social-profile a:hover:nth-child(2) {
+  background-color: #C13584; /* Instagram hover */
+}
+
+.social-profile a:hover:nth-child(3) {
+  background-color: #005983; /* LinkedIn hover */
+}
+
+.social-profile a:hover:nth-child(4) {
+  background-color: #1ebea5; /* WhatsApp hover */
+}
+
+.social-profile a:hover:nth-child(5) {
+  background-color: #1991da; /* Twitter hover */
+}
+
+/* --------------------------------  Footer   ---------------------------------------------- */
+
+.footer__container {
+  background-color: var(--blue);
+}
+.section__container-f {
+  max-width: var(--max-width);
+  padding-top: 40px;
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+  padding-left: 30px;
+
+}
+.fa-regular{
+  color: var(--white);
+}
+ .fa-phone {
+  color: var(--white);
+
+ }
+.footer__col p {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+  color: var(--text-color);
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer__col p:hover {
+  color: var(--white);
+  box-shadow: 
+    0 0 10px var(--white), 
+    0 0 20px var(--white), 
+    0 0 30px var(--white), 
+    0 0 40px var(--white),  /* Añade un destello más */
+    0 0 50px var(--white);  /* Otro destello más */
+}
+
+.footer__col p span {
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+.footer__bar {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--text-light);
+  background-color: var(--black);
+}
+
+.footer__bar p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  padding-left: 30px;
+}
+
+
+  .socials {
+    /* Configuración de los íconos en una fila con espacio entre ellos */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 40px;
+  }
+  
+  .socials span {
+    /* Diseño de los contenedores de los íconos: centrado, circular, con un fondo sutil */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--text-light);
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+    cursor: pointer;
+    transition: 0.3s; /* Transiciones suaves para los cambios de color y destello */
+    position: relative;
+  }
+  
+  .socials span:hover {
+    /* Cambios al hacer hover: color de texto blanco y fondo del color primario */
+    color: var(--white);
+    background-color: var(--primary-color); /* Cambia el fondo al color primario */
+    
+    /* Efecto de destello con múltiples sombras alrededor del ícono */
+    box-shadow: 
+      0 0 15px var(--primary-color),   /* Primer destello */
+      0 0 30px var(--secondary-color), /* Segundo destello */
+      0 0 45px var(--primary-color),   /* Tercer destello adicional */
+      0 0 60px var(--secondary-color); /* Cuarto destello adicional */
+  }
+  
+  .socials span i {
+    /* Tamaño del ícono dentro del span */
+    font-size: 1.2rem;
+  }
+  
+  /* Personalización de los colores de los destellos para cada red social */
+  .socials span:nth-child(1):hover {
+    --primary-color: #3b5998; /* Facebook: color primario */
+    --secondary-color: #8b9dc3; /* Facebook: color secundario para el destello */
+  }
+  
+  .socials span:nth-child(2):hover {
+    --primary-color: #00acee; /* Twitter: color primario */
+    --secondary-color: #1da1f2; /* Twitter: color secundario para el destello */
+  }
+  
+  .socials span:nth-child(3):hover {
+    --primary-color: #c32aa3; /* Instagram: color primario */
+    --secondary-color: #e1306c; /* Instagram: color secundario para el destello */
+  }
+  
+  .socials span:nth-child(4):hover {
+    --primary-color: #ff0000; /* YouTube: color primario */
+    --secondary-color: #ff4b4b; /* YouTube: color secundario para el destello */
+  }
+
+
+  /* ----------------------------------------  Ajuste a moviles ---------------------------------------  */
+@media (max-width: 768px) {
+  .container-flex {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    z-index: 1001; /* Asegura que el icono del menú esté por encima de otros elementos */
+  }
+  .testimonial-box {
+    margin-top: -110px; /* Subir el testimonial-box 40px hacia arriba */
+    z-index: 999; /* Asegura que el z-index sea mayor que otros elementos */
+    position: relative; /* Asegura que el z-index tenga efecto */
+}
+.social-button{
+  background-color: blue;
+}
+  .menu-icon {
+    display: block;
+}
+
+.btn.btn-labeled {
+  /*position: fixed; /* Fija el botón en la pantalla */
+  position: relative;
+  top: -290px;       /* Coloca el botón a 20px de la parte superior */
+  right: -100px;     /* Coloca el botón a 20px del borde derecho */
+  z-index: 1000;   /* Asegura que el botón esté por encima de otros elementos */
+  
+  /* Ajustes para hacerlo más pequeño */
+  font-size: 12px;    /* Reduce el tamaño del texto */
+  padding: 5px 10px;  /* Reduce el padding dentro del botón */
+  width: auto;        /* Ajusta automáticamente el ancho según el contenido */
+  height: auto;       /* Ajusta automáticamente la altura */
+}
+
+.btn-label i {
+  font-size: 12px; /* Reduce el tamaño del ícono */
+}
+
+nav.active {
+  display: flex; /* Muestra el menú cuando tiene la clase 'active' */
+  opacity: 1;
+  visibility: visible;
+}
+
+ nav ul {
+  display: none; /* Oculta el menú por defecto en móviles */
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+    text-align: center; /* Centra los ítems del menú horizontalmente */
+} 
+
+
+nav.active ul {
+  display: flex; /* Muestra el menú cuando nav tiene la clase 'active' */
+}
+
+nav ul li {
+  margin: 10px 0; /* Espaciado entre los ítems del menú */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--white); /* Cambia el color del texto según tu preferencia */
+  padding: 10px;
+  display: block;
+}
+    .main-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .main-content .btn-label {
+      background: #00d4ff;
+  }
+  .main-content .btn-labeled {
+    color:  var(--white);
+  }
+  .main-content .btn {
+    background: var(--blue)
+  }
+    .image-pista {
+        padding-left: 0;
+    }
+
+    .main-text h1 {
+        font-size: 40px;
+    }
+
+    .main-content .btn {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .swiper {
+        width: 100%;
+    }
+
+    /* ---------------------------------  Nosotros -------------------------------------- */
+
+    .section__container {
+      grid-template-columns: 1fr; /* Cambia a una columna */
+      justify-items: center; /* Centra los elementos horizontalmente */
+      text-align: center; /* Alinea el texto al centro */
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .template__content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    .template__image img {
+      width: 80%; /* Ajusta el tamaño de la imagen en móviles */
+    }
+  
+    .btn-nosotros {
+      width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+    }
+  /* ---------------------------- Colaboradores ----------------------------- */
+  .flex-container-banner {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espacio reducido entre los elementos en móviles */
+}
+
+.grid-item-banner {
+    width: 100%; /* Los elementos ocuparán el 100% del ancho en móviles */
+    margin-bottom: 1rem; /* Añade espacio entre los elementos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ajustes de tamaño y espaciado para imágenes y texto */
+.grid-item-banner img {
+    width: 80%; /* Reduce el tamaño de la imagen para móviles */
+    border-radius: 50%; /* Opcional: hacer las imágenes circulares */
+    transition: transform 0.3s ease;
+}
+
+.grid-item-banner:hover {
+    transform: translateY(-5px); /* Menor elevación en móviles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+}
+
+.grid-item-banner h2 {
+    font-size: 1rem; /* Texto ligeramente más pequeño */
+}
+
+/* Animaciones para los modales en móviles */
+.modalbox {
+    width: 90%; /* Asegura que el modal ocupe casi todo el ancho */
+    height: auto; /* Altura automática para ajustarse al contenido */
+    transition: all 500ms ease-in-out;
+    padding: 1rem; /* Ajuste de padding en móviles */
+}
+
+.modal-content {
+    padding: 1rem;
+}
+
+.social-profile a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px; /* Tamaño reducido para los íconos en móviles */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-profile a:hover i {
+    transform: scale(1.1); /* Efecto de hover más suave en móviles */
+}
+
+
+/* Animaciones generales */
+@keyframes fadeInUp {
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+/* Aplicar la animación a los elementos del grid */
+.grid-item-banner {
+animation: fadeInUp 0.5s ease-out;
+}
+
+    /* -------------------------------Footer------------------------------------- */
+    .footer__grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .footer__col p {
+      padding-left: 0;
+      text-align: center;
+    }
+  
+    .footer__col h4 {
+      text-align: center;
+      padding-left: 0;
+    }
+  
+    .footer__bar {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  
+    .socials {
+      justify-content: center;
+      padding-right: 0;
+    }
+  
+    .socials span {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .footer__bar p {
+      padding-left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
